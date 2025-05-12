@@ -2,8 +2,12 @@ import random
 
 # variables de estado
 ST1 = ST2 = ST3 = 0
+
+# datos
 VD1 = VD2 = VD3 = DP = CVL = 0
-TP1 = TP2 = TP3 = STR = DL = 0
+
+# variables de control
+TP1 = TP2 = TP3 = STR = DL = 0 #DL poner como porcentaje ejemplo: 50 en lugar de 0.5
 
 # auxiliares y resultados
 T = 0
@@ -13,11 +17,13 @@ PRECIO3 = PRECIO2 * 0.70
 FV = 1.0
 FP = 1.0
 BEN = LIQ = DES = TOT = VDT = 0
-diasEspeciales = [5, 167, 228, 328, 359]
+diasEspeciales = [5, 167, 228, 328, 359] #dias en los que las ventas suben un porcentaje fijo
 factorCosto = 0.8
 factorGanancia = 0.2
 
+#TEF
 FLL1 = FLL2 = FLL3 = 1
+
 VENTAS_PERDIDAS = 0
 
 def main():
@@ -140,6 +146,37 @@ def imprimir_resultados():
 
 peso_perdidas = 10000 # Penalización por unidad perdida
 
+"""TP1 = 11000
+TP2 = 4500
+TP3 = 500
+STR = 700
+DL = 70
+reiniciar_variables()
+main()
+print("---- CONFIGURACIÓN 1 ----")
+imprimir_resultados()
+
+TP1 = 12000
+TP2 = 4500
+TP3 = 500
+STR = 800
+DL = 70
+reiniciar_variables()
+main()
+print("---- CONFIGURACIÓN 2 ----")
+imprimir_resultados()"""
+
+TP1 = 12000
+TP2 = 4000
+TP3 = 500
+STR = 800
+DL = 50
+reiniciar_variables()
+main()
+print("---- CONFIGURACIÓN 3 ----")
+imprimir_resultados()
+
+"""
 # Exploración
 mejor_valor = float('-inf')
 mejor_config = {}
@@ -178,3 +215,4 @@ DL = mejor_config["DL"]
 reiniciar_variables()
 main()
 imprimir_resultados()
+"""
